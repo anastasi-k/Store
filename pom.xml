@@ -9,13 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>repository</module>
-        <module>app</module>
-        <module>core</module>
-        <module>service</module>
-    </modules>
-
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
