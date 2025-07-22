@@ -1,3 +1,5 @@
+package ru.anastasiiak.store.core;
+
 public class Order {
     private final Cart cart;
     private OrderStatus status;

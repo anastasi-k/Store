@@ -1,3 +1,5 @@
+package ru.anastasiiak.store.core;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

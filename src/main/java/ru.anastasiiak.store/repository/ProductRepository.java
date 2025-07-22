@@ -1,3 +1,6 @@
+package ru.anastasiiak.store.repository;
+
+import ru.anastasiiak.store.core.Product;
 import java.util.List;
 
 public interface ProductRepository {

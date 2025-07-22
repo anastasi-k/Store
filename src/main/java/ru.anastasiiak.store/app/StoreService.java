@@ -1,3 +1,13 @@
+package ru.anastasiiak.store.app;
+
+import ru.anastasiiak.store.core.PasswordSetup;
+import ru.anastasiiak.store.core.Product;
+import ru.anastasiiak.store.core.User;
+import ru.anastasiiak.store.repository.ProductRepository;
+import ru.anastasiiak.store.repository.UserRepository;
+import ru.anastasiiak.store.service.CartService;
+import ru.anastasiiak.store.service.OrderService;
+
 public class StoreService {
 
     private final ProductRepository productRepository;

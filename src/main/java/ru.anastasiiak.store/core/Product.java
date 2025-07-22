@@ -1,3 +1,5 @@
+package ru.anastasiiak.store.core;
+
 public class Product {
 
     private final String name;

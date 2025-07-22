@@ -1,5 +1,10 @@
+package ru.anastasiiak.store.core;
+
 public enum OrderStatus {
-    СОЗДАН,
-    ОПЛАЧЕН,
-    ВЫПОЛНЕН
+    CREATED ("создан"),
+    PAID ("оплачен"),
+    COMPLETED("выполнен");
+
+    OrderStatus(String title) {
+    }
 }

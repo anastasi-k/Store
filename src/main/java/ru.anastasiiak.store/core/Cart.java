@@ -1,3 +1,5 @@
+package ru.anastasiiak.store.core;
+
 import java.util.ArrayList;
 import java.util.List;
 
