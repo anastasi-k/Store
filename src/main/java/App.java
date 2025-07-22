@@ -1,5 +1,6 @@
 import ru.anastasiiak.store.core.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class App {
     private List<Order> allOrder;
 
 
-    public StoreService(){
+    public App() {
         this.availableProducts = new ArrayList<>();
         this.registeredUsers = new ArrayList<>();
         this.allOrder = new ArrayList<>();

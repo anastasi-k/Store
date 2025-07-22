@@ -14,7 +14,7 @@ public class Cart {
         this.totalAmount = 0.0;
     }
 
-    // добавляем товар в корзину
+    // метод для добавления товара в корзину
     public void addProduct(Product product) {
         if (product == null) {
             throw new IllegalArgumentException("Товар не найден");
@@ -22,7 +22,7 @@ public class Cart {
         totalAmount += product.getPrice();
     }
 
-    // удаляем товар из корзины
+    // метод для удаления товара из корзины
     public boolean removeProduct(Product product) {
         if (product == null) {
             throw new IllegalArgumentException("Товар не найден");
@@ -33,7 +33,7 @@ public class Cart {
         return removed;
     }
 
-    // считаем сумму товаров в корзине
+    // метод для подсчета суммы товаров в корзине
     public void calculateTotalAmount() {
         totalAmount = products.stream().mapToDouble(Product::getPrice).sum();
     }
@@ -47,8 +47,8 @@ public class Cart {
     public void clearCart() {
         products.clear();
     }
-// геттеры
 
+    // геттеры
     public List<Product> getProducts() {
         return new ArrayList<>(products);
     }

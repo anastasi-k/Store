@@ -1,8 +1,6 @@
 package ru.anastasiiak.store.app;
 
-import ru.anastasiiak.store.core.PasswordSetup;
-import ru.anastasiiak.store.core.Product;
-import ru.anastasiiak.store.core.User;
+import ru.anastasiiak.store.core.*;
 import ru.anastasiiak.store.repository.ProductRepository;
 import ru.anastasiiak.store.repository.UserRepository;
 import ru.anastasiiak.store.service.CartService;
@@ -15,7 +13,7 @@ public class StoreService {
     private final CartService cartService;
     private final OrderService orderService;
 
-//    constructor
+    // constructor
     public StoreService(ProductRepository productRepository,
                         UserRepository userRepository,
                         CartService cartService,
@@ -26,17 +24,27 @@ public class StoreService {
         this.orderService = orderService;
     }
 
-// method for creating Product instance
+    // method for creating Product instance
     public Product createProduct(String name, double price) {
         return productRepository.createProduct(name, price);
     }
 
-//    method for creating User instance
+    // method for creating User instance
     public User registerUser(String login, String password) {
         if (!PasswordSetup.isValidPassword(password)) {
             throw new IllegalArgumentException("Пароль не соответствует требованиям");
         }
         return userRepository.registerUser(login, password);
+    }
+
+    // method for creating Cart instance
+    public Cart createCart(User user) {
+        return cartService.createCart(user);
+    }
+
+    // method for creating Order instance
+    public Order checkout(Cart cart) {
+        return orderService.checkout(cart);
     }
 
 }
